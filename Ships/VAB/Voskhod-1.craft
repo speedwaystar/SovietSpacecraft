@@ -440,150 +440,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleCrewAssignment
-		isEnabled = True
-		slotAssignments = 
-		stagingEnabled = True
-		EVENTS
-		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleScienceExperiment
-		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		cooldownToGo = 0
-		stagingEnabled = True
-		EVENTS
-		{
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CollectDataExternalEvent
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 1.5
-				externalToEVAOnly = True
-			}
-			ReviewDataEvent
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Review Data
-				guiName = Review Data
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeployExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CleanUpExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Restore
-				guiName = Restore
-				category = Restore
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Experiment: Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
 		name = MechJebCore
 		isEnabled = True
 		running = True
@@ -982,9 +838,6 @@ PART
 			MechJebModuleCustomInfoWindow
 			{
 			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
 			MechJebModuleWarpController
 			{
 				unlockParts = 
@@ -1173,72 +1026,6 @@ PART
 		isVisible = True
 		flowMode = Both
 	}
-	RESOURCE
-	{
-		name = Food
-		amount = 15.358
-		maxAmount = 15.358
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Water
-		amount = 10.15
-		maxAmount = 10.15
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Oxygen
-		amount = 1554.532
-		maxAmount = 1554.532
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = CarbonDioxide
-		amount = 0
-		maxAmount = 0.1
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Waste
-		amount = 0
-		maxAmount = 1.4
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = WasteWater
-		amount = 0
-		maxAmount = 0.1
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
 }
 PART
 {
@@ -1396,30 +1183,6 @@ PART
 	MODULE
 	{
 		name = ModuleDragModifier
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCrewRequirement
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -3154,7 +2917,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -3435,7 +3198,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -3716,7 +3479,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -3997,7 +3760,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -4413,8 +4176,8 @@ PART
 	{
 		name = FStextureSwitch2
 		isEnabled = True
-		selectedTexture = 3
-		selectedTextureURL = RN_R7/master/SEMYORKA
+		selectedTexture = 1
+		selectedTextureURL = RN_R7/master/VOSTOK
 		selectedMapURL = 
 		stagingEnabled = True
 		EVENTS
@@ -4792,7 +4555,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -5073,7 +4836,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -5354,7 +5117,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -5635,7 +5398,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -5916,7 +5679,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -6552,7 +6315,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -6560,7 +6323,7 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4294681092
 	partName = Part
-	pos = -2.798177,0.8634472,0.437583
+	pos = -2.798177,0.8634472,0.4375831
 	attPos = 0,0,0
 	attPos0 = 0.4375811,-0.6916962,1.643163
 	rot = 0,1,-1.782677E-17,6.824152E-12
@@ -6835,7 +6598,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -6843,7 +6606,7 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4294680982
 	partName = Part
-	pos = -2.798177,0.8634472,-0.4346822
+	pos = -2.798177,0.8634472,-0.4346823
 	attPos = 0,0,0
 	attPos0 = -0.4346832,-0.6916962,1.643163
 	rot = 0,1,-1.782677E-17,6.824152E-12
@@ -7118,7 +6881,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -7387,55 +7150,6 @@ PART
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = 
-		stagingEnabled = True
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -7811,10 +7525,10 @@ PART
 {
 	part = rn.r7.bvgd.engine_4294680646
 	partName = Part
-	pos = -1.698759E-06,1.555119,1.155002
+	pos = -1.698765E-06,1.555119,1.155002
 	attPos = 0,0,0
 	attPos0 = -0.3353402,-10.50336,-6.698007E-09
-	rot = -5.224617E-06,4.336809E-19,1.136868E-13,1
+	rot = -5.224618E-06,4.336809E-19,1.136868E-13,1
 	attRot = 0,-0.7071067,0,0.7071067
 	attRot0 = -1.847181E-06,-0.7071068,-1.847181E-06,0.7071068
 	mir = 1,1,1
@@ -8090,7 +7804,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -8098,10 +7812,10 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4294680484
 	partName = Part
-	pos = 0.4375804,0.8634472,2.798179
+	pos = 0.4375805,0.8634472,2.79818
 	attPos = 0,0,0
 	attPos0 = 0.4375812,-0.6916962,1.643164
-	rot = -5.684342E-13,0.7071069,3.410605E-13,-0.7071069
+	rot = -1.136868E-12,0.7071069,4.547474E-13,-0.7071069
 	attRot = 0,0.9999999,0,0
 	attRot0 = -3.69436E-06,0.7071068,3.694361E-06,-0.7071068
 	mir = 1,1,1
@@ -8373,7 +8087,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -8381,10 +8095,10 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4294680374
 	partName = Part
-	pos = -0.4346867,0.8634472,2.798179
+	pos = -0.4346868,0.8634472,2.79818
 	attPos = 0,0,0
 	attPos0 = -0.4346833,-0.6916962,1.643164
-	rot = -5.684342E-13,0.7071069,3.410605E-13,-0.7071069
+	rot = -1.136868E-12,0.7071069,4.547474E-13,-0.7071069
 	attRot = 0,0.9999999,0,0
 	attRot0 = -3.69436E-06,0.7071068,3.694361E-06,-0.7071068
 	mir = 1,1,1
@@ -8656,7 +8370,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -8664,7 +8378,7 @@ PART
 {
 	part = rn.WING.R7_4294680264
 	partName = Winglet
-	pos = -1.594451E-06,1.616938,3.193408
+	pos = -1.594457E-06,1.616938,3.193408
 	attPos = 0,0,0
 	attPos0 = -2.373741,-10.44156,-6.501892E-12
 	rot = 1.932676E-12,0.7071068,1.932676E-12,0.7071068
@@ -8775,10 +8489,10 @@ PART
 {
 	part = launchClamp1_4294680224
 	partName = Part
-	pos = -1.102713E-06,1.210157,3.935823
+	pos = -1.10272E-06,1.210157,3.935824
 	attPos = 0,0,0
 	attPos0 = -3.116151,-10.84833,2.606152E-07
-	rot = -1.082753E-09,0.9995476,-0.03007938,-9.888952E-08
+	rot = -1.514309E-10,0.9995476,-0.03007938,-9.888952E-08
 	attRot = 0,0,0,1
 	attRot0 = 0.02126748,0.7067869,-0.02126749,0.7067869
 	mir = 1,1,1
@@ -8812,7 +8526,7 @@ PART
 		scaleFactor = 0.7629949
 		height = 1.925186
 		stagingEnabled = True
-		towerRot = 1.082753E-09,-0.9995476,0.03007938,-9.888952E-08
+		towerRot = 1.514309E-10,-0.9995476,0.03007938,-9.888952E-08
 		EVENTS
 		{
 			Release
@@ -8925,55 +8639,6 @@ PART
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = 
-		stagingEnabled = True
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -9628,7 +9293,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -9636,10 +9301,10 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4294679876
 	partName = Part
-	pos = 2.798172,0.8634472,-0.437581
+	pos = 2.798172,0.8634472,-0.4375811
 	attPos = 0,0,0
 	attPos0 = 0.4375811,-0.6916962,1.643163
-	rot = -2.273915E-13,-4.370457E-08,0,-1
+	rot = -4.547652E-13,-4.370457E-08,0,-1
 	attRot = 0,0.9999999,0,0
 	attRot0 = -3.69436E-06,0.7071068,3.694361E-06,-0.7071068
 	mir = 1,1,1
@@ -9911,7 +9576,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -9919,10 +9584,10 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4294679766
 	partName = Part
-	pos = 2.798173,0.8634472,0.4346852
+	pos = 2.798173,0.8634472,0.4346853
 	attPos = 0,0,0
 	attPos0 = -0.4346832,-0.6916962,1.643163
-	rot = -2.273915E-13,-4.370457E-08,0,-1
+	rot = -4.547652E-13,-4.370457E-08,0,-1
 	attRot = 0,0.9999999,0,0
 	attRot0 = -3.69436E-06,0.7071068,3.694361E-06,-0.7071068
 	mir = 1,1,1
@@ -10194,7 +9859,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -10205,7 +9870,7 @@ PART
 	pos = 3.193398,1.616938,1.378357E-06
 	attPos = 0,0,0
 	attPos0 = -2.37374,-10.44156,-2.65528E-14
-	rot = -9.113891E-40,1,0,-4.371139E-08
+	rot = 0,1,0,-4.371139E-08
 	attRot = 0,0,0,1
 	attRot0 = 0,7.981514E-27,2.612306E-06,1
 	mir = 1,1,1
@@ -10463,55 +10128,6 @@ PART
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = 
-		stagingEnabled = True
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -10887,7 +10503,7 @@ PART
 {
 	part = rn.r7.bvgd.engine_4294679430
 	partName = Part
-	pos = -1.907376E-06,1.555119,-1.154999
+	pos = -1.907383E-06,1.555119,-1.154999
 	attPos = 0,0,0
 	attPos0 = -0.3353402,-10.50336,-6.698007E-09
 	rot = 2.273737E-13,1,5.224616E-06,3.412077E-12
@@ -11166,7 +10782,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -11174,7 +10790,7 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4294679268
 	partName = Part
-	pos = -0.4375845,0.8634472,-2.798176
+	pos = -0.4375846,0.8634472,-2.798177
 	attPos = 0,0,0
 	attPos0 = 0.4375812,-0.6916962,1.643164
 	rot = 4.547474E-13,-0.7071069,4.547474E-13,-0.7071069
@@ -11449,7 +11065,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -11457,7 +11073,7 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4294679158
 	partName = Part
-	pos = 0.4346826,0.8634472,-2.798176
+	pos = 0.4346828,0.8634472,-2.798177
 	attPos = 0,0,0
 	attPos0 = -0.4346833,-0.6916962,1.643164
 	rot = 4.547474E-13,-0.7071069,4.547474E-13,-0.7071069
@@ -11732,7 +11348,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -11740,7 +11356,7 @@ PART
 {
 	part = rn.WING.R7_4294679048
 	partName = Winglet
-	pos = -1.698759E-06,1.616938,-3.193404
+	pos = -1.698765E-06,1.616938,-3.193404
 	attPos = 0,0,0
 	attPos0 = -2.373741,-10.44156,6.501892E-12
 	rot = 1.932676E-12,0.7071068,-1.932676E-12,-0.7071068
@@ -11851,7 +11467,7 @@ PART
 {
 	part = launchClamp1_4294679008
 	partName = Part
-	pos = -1.907377E-06,1.210157,-3.93582
+	pos = -1.907384E-06,1.210157,-3.935821
 	attPos = 0,0,0
 	attPos0 = -3.116151,-10.84833,2.606288E-07
 	rot = -0.03007938,-8.940697E-08,0,-0.9995477
@@ -11885,7 +11501,7 @@ PART
 	{
 		name = LaunchClamp
 		isEnabled = True
-		scaleFactor = 0.7629949
+		scaleFactor = 0.7629948
 		height = 1.925186
 		stagingEnabled = True
 		towerRot = 0.03007938,8.940696E-08,0,-0.9995475
@@ -12001,55 +11617,6 @@ PART
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = 
-		stagingEnabled = True
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
