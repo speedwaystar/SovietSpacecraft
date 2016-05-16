@@ -1,5 +1,5 @@
 ship = Voskhod-2
-version = 1.1.0
+version = 1.1.2
 description = Equipped with an inflatable airlock, it established another milestone in space exploration when Alexey Leonov became the first person to "walk" in space.
 type = VAB
 size = 10.75387,36.88132,10.7539
@@ -28,6 +28,7 @@ PART
 	link = rn.voskhod.retro.dec_4294658684
 	link = rn.vostok.dec_4294635652
 	link = rn.voskhod.airlock_4294361184
+	link = rn.zond.asas_4293801472
 	attN = bottom,rn.vostok.dec_4294635652
 	attN = top,rn.voskhod.retro.dec_4294658684
 	attN = para,rn.vostok.para_4294773838
@@ -442,9 +443,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleCrewAssignment
+		name = TRReflection
 		isEnabled = True
-		slotAssignments = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -463,125 +463,6 @@ PART
 		}
 		ACTIONS
 		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleScienceExperiment
-		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		cooldownToGo = 0
-		stagingEnabled = True
-		EVENTS
-		{
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CollectDataExternalEvent
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 1.5
-				externalToEVAOnly = True
-			}
-			ReviewDataEvent
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Review Data
-				guiName = Review Data
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeployExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CleanUpExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Restore
-				guiName = Restore
-				category = Restore
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Experiment: Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
 		}
 	}
 	MODULE
@@ -984,9 +865,6 @@ PART
 			MechJebModuleCustomInfoWindow
 			{
 			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
 			MechJebModuleWarpController
 			{
 				unlockParts = 
@@ -1175,72 +1053,6 @@ PART
 		isVisible = True
 		flowMode = Both
 	}
-	RESOURCE
-	{
-		name = Food
-		amount = 15.358
-		maxAmount = 15.358
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Water
-		amount = 10.15
-		maxAmount = 10.15
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Oxygen
-		amount = 1554.532
-		maxAmount = 1554.532
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = CarbonDioxide
-		amount = 0
-		maxAmount = 0.1
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Waste
-		amount = 0
-		maxAmount = 1.4
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = WasteWater
-		amount = 0
-		maxAmount = 0.1
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
 }
 PART
 {
@@ -1421,7 +1233,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleCrewRequirement
+		name = TRReflection
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -1460,7 +1272,7 @@ PART
 	dstg = 1
 	sidx = 0
 	sqor = 3
-	sepI = 0
+	sepI = 3
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -1544,7 +1356,7 @@ PART
 	dstg = 1
 	sidx = 0
 	sqor = 4
-	sepI = 0
+	sepI = 4
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -1658,6 +1470,30 @@ PART
 			}
 		}
 	}
+	MODULE
+	{
+		name = TRReflection
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -1675,7 +1511,7 @@ PART
 	dstg = 2
 	sidx = 0
 	sqor = 6
-	sepI = 0
+	sepI = 4
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -2063,6 +1899,30 @@ PART
 			}
 		}
 	}
+	MODULE
+	{
+		name = TRReflection
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = MonoPropellant
@@ -2102,7 +1962,7 @@ PART
 	dstg = 2
 	sidx = 0
 	sqor = 0
-	sepI = 0
+	sepI = 3
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -2243,7 +2103,7 @@ PART
 	dstg = 1
 	sidx = 0
 	sqor = 5
-	sepI = 0
+	sepI = 5
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -2431,9 +2291,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleCrewAssignment
+		name = TRReflection
 		isEnabled = True
-		slotAssignments = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2518,7 +2377,7 @@ PART
 	dstg = 3
 	sidx = 0
 	sqor = 7
-	sepI = 0
+	sepI = 7
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -2682,7 +2541,7 @@ PART
 	dstg = 5
 	sidx = 0
 	sqor = 9
-	sepI = 0
+	sepI = 9
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -2925,7 +2784,7 @@ PART
 	dstg = 5
 	sidx = 1
 	sqor = 9
-	sepI = 0
+	sepI = 9
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -3168,7 +3027,7 @@ PART
 	dstg = 4
 	sidx = 2
 	sqor = 8
-	sepI = 0
+	sepI = 7
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -3656,7 +3515,7 @@ PART
 	dstg = 4
 	sidx = 0
 	sqor = 8
-	sepI = 0
+	sepI = 7
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -3917,7 +3776,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -3937,7 +3796,7 @@ PART
 	dstg = 4
 	sidx = 0
 	sqor = 8
-	sepI = 0
+	sepI = 7
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -4198,7 +4057,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -4218,7 +4077,7 @@ PART
 	dstg = 4
 	sidx = 1
 	sqor = 8
-	sepI = 0
+	sepI = 7
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -4479,7 +4338,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -4499,7 +4358,7 @@ PART
 	dstg = 4
 	sidx = 1
 	sqor = 8
-	sepI = 0
+	sepI = 7
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -4760,7 +4619,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -4780,7 +4639,7 @@ PART
 	dstg = 5
 	sidx = 3
 	sqor = 8
-	sepI = 0
+	sepI = 8
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -4940,7 +4799,7 @@ PART
 	dstg = 6
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 8
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -5287,7 +5146,7 @@ PART
 	dstg = 6
 	sidx = 5
 	sqor = 12
-	sepI = 0
+	sepI = 8
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -5555,7 +5414,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -5575,7 +5434,7 @@ PART
 	dstg = 6
 	sidx = 0
 	sqor = 12
-	sepI = 0
+	sepI = 8
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -5593,7 +5452,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -5836,7 +5695,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -5856,7 +5715,7 @@ PART
 	dstg = 6
 	sidx = 0
 	sqor = 12
-	sepI = 0
+	sepI = 8
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -5874,7 +5733,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -6117,7 +5976,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -6137,7 +5996,7 @@ PART
 	dstg = 6
 	sidx = 1
 	sqor = 12
-	sepI = 0
+	sepI = 8
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -6155,7 +6014,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -6398,7 +6257,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -6418,7 +6277,7 @@ PART
 	dstg = 6
 	sidx = 1
 	sqor = 12
-	sepI = 0
+	sepI = 8
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -6436,7 +6295,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -6679,7 +6538,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -6699,7 +6558,7 @@ PART
 	dstg = 7
 	sidx = 0
 	sqor = 10
-	sepI = 0
+	sepI = 10
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -7048,7 +6907,7 @@ PART
 	dstg = 8
 	sidx = 2
 	sqor = 12
-	sepI = 0
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -7315,7 +7174,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -7323,7 +7182,7 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4294633898
 	partName = Part
-	pos = -2.798167,0.9053688,0.4375554
+	pos = -2.798167,0.9053688,0.4375555
 	attPos = 0,0,0
 	attPos0 = 0.4375811,-0.6916962,1.643163
 	rot = 0,1,-1.782677E-17,6.824152E-12
@@ -7335,7 +7194,7 @@ PART
 	dstg = 8
 	sidx = 3
 	sqor = 12
-	sepI = 0
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -7355,7 +7214,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -7598,7 +7457,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -7606,7 +7465,7 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4294633788
 	partName = Part
-	pos = -2.798167,0.9053688,-0.4347098
+	pos = -2.798167,0.9053688,-0.4347099
 	attPos = 0,0,0
 	attPos0 = -0.4346832,-0.6916962,1.643163
 	rot = 0,1,-1.782677E-17,6.824152E-12
@@ -7618,7 +7477,7 @@ PART
 	dstg = 8
 	sidx = 4
 	sqor = 12
-	sepI = 0
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -7638,7 +7497,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -7881,7 +7740,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -7901,7 +7760,7 @@ PART
 	dstg = 8
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -8012,7 +7871,7 @@ PART
 	dstg = 8
 	sidx = 0
 	sqor = 11
-	sepI = 0
+	sepI = 11
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -8171,55 +8030,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = 
-		stagingEnabled = True
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -8237,7 +8047,7 @@ PART
 	dstg = 7
 	sidx = 0
 	sqor = 10
-	sepI = 0
+	sepI = 10
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -8574,10 +8384,10 @@ PART
 {
 	part = rn.r7.bvgd.engine_4294633452
 	partName = Part
-	pos = 8.553241E-06,1.59704,1.154975
+	pos = 8.553235E-06,1.59704,1.154975
 	attPos = 0,0,0
 	attPos0 = -0.3353402,-10.50336,-6.698007E-09
-	rot = -5.224617E-06,4.336809E-19,1.136868E-13,1
+	rot = -5.224618E-06,4.336809E-19,1.136868E-13,1
 	attRot = 0,-0.7071067,0,0.7071067
 	attRot0 = -1.847181E-06,-0.7071068,-1.847181E-06,0.7071068
 	mir = 1,1,1
@@ -8586,7 +8396,7 @@ PART
 	dstg = 8
 	sidx = 2
 	sqor = 12
-	sepI = 0
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -8853,7 +8663,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -8861,10 +8671,10 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4294633290
 	partName = Part
-	pos = 0.4375906,0.9053688,2.798151
+	pos = 0.4375907,0.9053688,2.798152
 	attPos = 0,0,0
 	attPos0 = 0.4375812,-0.6916962,1.643164
-	rot = -5.684342E-13,0.7071069,3.410605E-13,-0.7071069
+	rot = -1.136868E-12,0.7071069,4.547474E-13,-0.7071069
 	attRot = 0,0.9999999,0,0
 	attRot0 = -3.69436E-06,0.7071068,3.694361E-06,-0.7071068
 	mir = 1,1,1
@@ -8873,7 +8683,7 @@ PART
 	dstg = 8
 	sidx = 3
 	sqor = 12
-	sepI = 0
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -8893,7 +8703,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -9136,7 +8946,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -9144,10 +8954,10 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4294633180
 	partName = Part
-	pos = -0.4346764,0.9053688,2.798151
+	pos = -0.4346766,0.9053688,2.798151
 	attPos = 0,0,0
 	attPos0 = -0.4346833,-0.6916962,1.643164
-	rot = -5.684342E-13,0.7071069,3.410605E-13,-0.7071069
+	rot = -1.136868E-12,0.7071069,4.547474E-13,-0.7071069
 	attRot = 0,0.9999999,0,0
 	attRot0 = -3.69436E-06,0.7071068,3.694361E-06,-0.7071068
 	mir = 1,1,1
@@ -9156,7 +8966,7 @@ PART
 	dstg = 8
 	sidx = 4
 	sqor = 12
-	sepI = 0
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -9176,7 +8986,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -9419,7 +9229,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -9427,7 +9237,7 @@ PART
 {
 	part = rn.WING.R7_4294633070
 	partName = Winglet
-	pos = 8.657549E-06,1.658859,3.193381
+	pos = 8.657543E-06,1.658859,3.193382
 	attPos = 0,0,0
 	attPos0 = -2.373741,-10.44156,-6.501892E-12
 	rot = 1.932676E-12,0.7071068,1.932676E-12,0.7071068
@@ -9439,7 +9249,7 @@ PART
 	dstg = 8
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -9538,10 +9348,10 @@ PART
 {
 	part = launchClamp1_4294633030
 	partName = Part
-	pos = 9.149288E-06,1.252079,3.935795
+	pos = 9.149282E-06,1.252079,3.935796
 	attPos = 0,0,0
 	attPos0 = -3.116151,-10.84833,2.606152E-07
-	rot = -1.082753E-09,0.9995476,-0.03007938,-9.888952E-08
+	rot = -1.514309E-10,0.9995476,-0.03007938,-9.888952E-08
 	attRot = 0,0,0,1
 	attRot0 = 0.02126748,0.7067869,-0.02126749,0.7067869
 	mir = 1,1,1
@@ -9550,7 +9360,7 @@ PART
 	dstg = 8
 	sidx = 0
 	sqor = 11
-	sepI = 0
+	sepI = 11
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -9575,7 +9385,7 @@ PART
 		scaleFactor = 0.7796094
 		height = 1.967108
 		stagingEnabled = True
-		towerRot = 1.082753E-09,-0.9995476,0.03007938,-9.888952E-08
+		towerRot = 1.514309E-10,-0.9995476,0.03007938,-9.888952E-08
 		EVENTS
 		{
 			Release
@@ -9709,55 +9519,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = 
-		stagingEnabled = True
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -9775,7 +9536,7 @@ PART
 	dstg = 7
 	sidx = 0
 	sqor = 10
-	sepI = 0
+	sepI = 10
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -10124,7 +9885,7 @@ PART
 	dstg = 8
 	sidx = 2
 	sqor = 12
-	sepI = 0
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -10391,7 +10152,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -10399,10 +10160,10 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4294632682
 	partName = Part
-	pos = 2.798183,0.9053688,-0.4376086
+	pos = 2.798184,0.9053688,-0.4376087
 	attPos = 0,0,0
 	attPos0 = 0.4375811,-0.6916962,1.643163
-	rot = -2.273915E-13,-4.370457E-08,0,-1
+	rot = -4.547652E-13,-4.370457E-08,0,-1
 	attRot = 0,0.9999999,0,0
 	attRot0 = -3.69436E-06,0.7071068,3.694361E-06,-0.7071068
 	mir = 1,1,1
@@ -10411,7 +10172,7 @@ PART
 	dstg = 8
 	sidx = 3
 	sqor = 12
-	sepI = 0
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -10431,7 +10192,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -10674,7 +10435,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -10682,10 +10443,10 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4294632572
 	partName = Part
-	pos = 2.798183,0.9053688,0.4346576
+	pos = 2.798183,0.9053688,0.4346577
 	attPos = 0,0,0
 	attPos0 = -0.4346832,-0.6916962,1.643163
-	rot = -2.273915E-13,-4.370457E-08,0,-1
+	rot = -4.547652E-13,-4.370457E-08,0,-1
 	attRot = 0,0.9999999,0,0
 	attRot0 = -3.69436E-06,0.7071068,3.694361E-06,-0.7071068
 	mir = 1,1,1
@@ -10694,7 +10455,7 @@ PART
 	dstg = 8
 	sidx = 4
 	sqor = 12
-	sepI = 0
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -10714,7 +10475,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -10957,7 +10718,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -10968,7 +10729,7 @@ PART
 	pos = 3.193408,1.658859,-2.621114E-05
 	attPos = 0,0,0
 	attPos0 = -2.37374,-10.44156,-2.65528E-14
-	rot = -9.113891E-40,1,0,-4.371139E-08
+	rot = 0,1,0,-4.371139E-08
 	attRot = 0,0,0,1
 	attRot0 = 0,7.981514E-27,2.612306E-06,1
 	mir = 1,1,1
@@ -10977,7 +10738,7 @@ PART
 	dstg = 8
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -11088,7 +10849,7 @@ PART
 	dstg = 8
 	sidx = 0
 	sqor = 11
-	sepI = 0
+	sepI = 11
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -11247,55 +11008,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = 
-		stagingEnabled = True
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -11313,7 +11025,7 @@ PART
 	dstg = 7
 	sidx = 0
 	sqor = 10
-	sepI = 0
+	sepI = 10
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -11650,7 +11362,7 @@ PART
 {
 	part = rn.r7.bvgd.engine_4294632236
 	partName = Part
-	pos = 8.344625E-06,1.59704,-1.155027
+	pos = 8.344618E-06,1.59704,-1.155027
 	attPos = 0,0,0
 	attPos0 = -0.3353402,-10.50336,-6.698007E-09
 	rot = 2.273737E-13,1,5.224616E-06,3.412077E-12
@@ -11662,7 +11374,7 @@ PART
 	dstg = 8
 	sidx = 2
 	sqor = 12
-	sepI = 0
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -11929,7 +11641,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -11937,7 +11649,7 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4294632074
 	partName = Part
-	pos = -0.4375742,0.9053688,-2.798204
+	pos = -0.4375743,0.9053688,-2.798205
 	attPos = 0,0,0
 	attPos0 = 0.4375812,-0.6916962,1.643164
 	rot = 4.547474E-13,-0.7071069,4.547474E-13,-0.7071069
@@ -11949,7 +11661,7 @@ PART
 	dstg = 8
 	sidx = 3
 	sqor = 12
-	sepI = 0
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -11969,7 +11681,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -12212,7 +11924,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -12220,7 +11932,7 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4294631964
 	partName = Part
-	pos = 0.4346929,0.9053688,-2.798204
+	pos = 0.434693,0.9053688,-2.798205
 	attPos = 0,0,0
 	attPos0 = -0.4346833,-0.6916962,1.643164
 	rot = 4.547474E-13,-0.7071069,4.547474E-13,-0.7071069
@@ -12232,7 +11944,7 @@ PART
 	dstg = 8
 	sidx = 4
 	sqor = 12
-	sepI = 0
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -12252,7 +11964,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -12495,7 +12207,7 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
@@ -12503,7 +12215,7 @@ PART
 {
 	part = rn.WING.R7_4294631854
 	partName = Winglet
-	pos = 8.553241E-06,1.658859,-3.193432
+	pos = 8.553235E-06,1.658859,-3.193432
 	attPos = 0,0,0
 	attPos0 = -2.373741,-10.44156,6.501892E-12
 	rot = 1.932676E-12,0.7071068,-1.932676E-12,-0.7071068
@@ -12515,7 +12227,7 @@ PART
 	dstg = 8
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -12614,7 +12326,7 @@ PART
 {
 	part = launchClamp1_4294631814
 	partName = Part
-	pos = 8.344625E-06,1.252079,-3.935847
+	pos = 8.344618E-06,1.252079,-3.935848
 	attPos = 0,0,0
 	attPos0 = -3.116151,-10.84833,2.606288E-07
 	rot = -0.03007938,-8.940697E-08,0,-0.9995477
@@ -12626,7 +12338,7 @@ PART
 	dstg = 8
 	sidx = 0
 	sqor = 11
-	sepI = 0
+	sepI = 11
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -12785,55 +12497,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = 
-		stagingEnabled = True
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -12851,7 +12514,7 @@ PART
 	dstg = 6
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 8
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -12870,8 +12533,8 @@ PART
 	{
 		tgt = 4294634138
 		pos = -0.02245558,0.1589357,-0.01788706
-		rot = 0,-0.0008257534,-0.001475844,0.9999986
-		dir = -0.1390368,0.9840748,-0.1107502
+		rot = -4.909598E-17,-0.0008257534,-0.001475844,0.9999986
+		dir = -0.1390372,0.9840747,-0.1107505
 	}
 	MODULE
 	{
@@ -12938,7 +12601,7 @@ PART
 	dstg = 6
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 8
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -12956,9 +12619,9 @@ PART
 	PARTDATA
 	{
 		tgt = 4294633530
-		pos = -0.02245558,0.1589357,-0.01788709
-		rot = 0,-0.0008255041,-0.001475842,0.9999986
-		dir = -0.1390368,0.9840748,-0.1107502
+		pos = -0.02245558,0.1589357,-0.0178871
+		rot = -2.950255E-16,-0.0008255043,-0.001475842,0.9999989
+		dir = -0.1390372,0.9840747,-0.1107507
 	}
 	MODULE
 	{
@@ -13025,7 +12688,7 @@ PART
 	dstg = 6
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 8
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -13044,8 +12707,8 @@ PART
 	{
 		tgt = 4294632922
 		pos = -0.02245516,0.1589338,-0.01788674
-		rot = 0,-0.0008257543,-0.001475843,0.9999986
-		dir = -0.1390368,0.9840748,-0.1107502
+		rot = -2.988866E-17,-0.0008257543,-0.001475843,0.9999986
+		dir = -0.1390363,0.9840749,-0.1107499
 	}
 	MODULE
 	{
@@ -13112,7 +12775,7 @@ PART
 	dstg = 6
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 8
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -13130,9 +12793,9 @@ PART
 	PARTDATA
 	{
 		tgt = 4294632314
-		pos = -0.02245582,0.1589376,-0.01788725
-		rot = 0,-0.0008259126,-0.001475842,0.9999986
-		dir = -0.1390368,0.9840748,-0.1107502
+		pos = -0.02245582,0.1589376,-0.01788726
+		rot = -2.647766E-16,-0.0008259128,-0.001475842,0.9999989
+		dir = -0.139037,0.9840747,-0.1107504
 	}
 	MODULE
 	{
@@ -13199,7 +12862,7 @@ PART
 	dstg = 6
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 8
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -13219,7 +12882,7 @@ PART
 		tgt = 4294634138
 		pos = -0.01651819,0.1632518,-0.01331711
 		rot = 0,-0.0008257534,-0.00147062,0.9999986
-		dir = -0.1003384,0.9916594,-0.08089367
+		dir = -0.1003384,0.9916594,-0.08089368
 	}
 	MODULE
 	{
@@ -13286,7 +12949,7 @@ PART
 	dstg = 6
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 8
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -13304,9 +12967,9 @@ PART
 	PARTDATA
 	{
 		tgt = 4294633530
-		pos = -0.01651933,0.1632613,-0.01331799
-		rot = 0,-0.0008255041,-0.001470618,0.9999986
-		dir = -0.1003384,0.9916594,-0.08089367
+		pos = -0.01651933,0.1632613,-0.013318
+		rot = 0,-0.0008255043,-0.001470618,0.9999989
+		dir = -0.1003394,0.9916593,-0.08089433
 	}
 	MODULE
 	{
@@ -13373,7 +13036,7 @@ PART
 	dstg = 6
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 8
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -13393,7 +13056,7 @@ PART
 		tgt = 4294632922
 		pos = -0.01651873,0.1632575,-0.01331753
 		rot = 0,-0.0008257544,-0.001470619,0.9999986
-		dir = -0.1003384,0.9916594,-0.08089367
+		dir = -0.1003381,0.9916595,-0.0808934
 	}
 	MODULE
 	{
@@ -13460,7 +13123,7 @@ PART
 	dstg = 6
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 8
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -13478,9 +13141,9 @@ PART
 	PARTDATA
 	{
 		tgt = 4294632314
-		pos = -0.01651826,0.1632518,-0.01331715
-		rot = 0,-0.0008259126,-0.001470617,0.9999986
-		dir = -0.1003384,0.9916594,-0.08089367
+		pos = -0.01651826,0.1632518,-0.01331716
+		rot = 0,-0.0008259128,-0.001470617,0.9999989
+		dir = -0.1003388,0.9916593,-0.08089396
 	}
 	MODULE
 	{
@@ -13529,5 +13192,243 @@ PART
 		ACTIONS
 		{
 		}
+	}
+}
+PART
+{
+	part = rn.zond.asas_4293801472
+	partName = Part
+	pos = 0.4000084,31.81122,0.1999738
+	attPos = -0.0349887,-0.3678989,0.08344513
+	attPos0 = 0.4349887,0.7678986,0.1165549
+	rot = -0.4384828,0.5073317,0.3364597,0.6611674
+	attRot = 0,0,0,1
+	attRot0 = -0.4384828,0.5073317,0.3364597,0.6611674
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,rn.voskhod.sc_4294780916
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		controlSrcStatusText = 
+		stagingEnabled = True
+		EVENTS
+		{
+			MakeReference
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Control From Here
+				guiName = Control From Here
+				category = Control From Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RenameVessel
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = True
+				guiIcon = Rename Vessel
+				guiName = Rename Vessel
+				category = Rename Vessel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		standaloneToggle = True
+		stagingEnabled = True
+		standaloneToggle_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = MechJebCore
+		isEnabled = True
+		running = True
+		stagingEnabled = True
+		running_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnOrbitProgradeAction
+			{
+				actionGroup = None
+			}
+			OnOrbitRetrogradeAction
+			{
+				actionGroup = None
+			}
+			OnOrbitNormalAction
+			{
+				actionGroup = None
+			}
+			OnOrbitAntinormalAction
+			{
+				actionGroup = None
+			}
+			OnOrbitRadialInAction
+			{
+				actionGroup = None
+			}
+			OnOrbitRadialOutAction
+			{
+				actionGroup = None
+			}
+			OnKillRotationAction
+			{
+				actionGroup = None
+			}
+			OnDeactivateSmartASSAction
+			{
+				actionGroup = None
+			}
+			OnPanicAction
+			{
+				actionGroup = None
+			}
+			OnTranslatronOffAction
+			{
+				actionGroup = None
+			}
+			OnTranslatronKeepVertAction
+			{
+				actionGroup = None
+			}
+			OnTranslatronZeroSpeedAction
+			{
+				actionGroup = None
+			}
+			OnTranslatronPlusOneSpeedAction
+			{
+				actionGroup = None
+			}
+			OnTranslatronMinusOneSpeedAction
+			{
+				actionGroup = None
+			}
+			OnTranslatronToggleHSAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+		Log
+		{
+			flight = 0
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 10
+		maxAmount = 10
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
 	}
 }
