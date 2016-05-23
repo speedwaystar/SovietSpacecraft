@@ -1,8 +1,8 @@
 ship = Progress 7K-TG & Launcher
-version = 1.1.0
+version = 1.1.2
 description = The first of the Soviet unmanned Progress spacecraft, used to resupply space stations in low Earth orbit.
 type = VAB
-size = 10.77853,40.18874,10.77856
+size = 10.77853,40.18874,10.77857
 PART
 {
 	part = tg.sa_4294112016
@@ -1746,10 +1746,10 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 2
+	istg = 3
 	dstg = 3
 	sidx = 0
-	sqor = 2
+	sqor = 3
 	sepI = 2
 	attm = 0
 	modCost = 0
@@ -2215,10 +2215,10 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 2
+	istg = 3
 	dstg = 3
 	sidx = 1
-	sqor = 2
+	sqor = 3
 	sepI = 2
 	attm = 0
 	modCost = 0
@@ -2382,10 +2382,10 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 2
 	dstg = 2
 	sidx = 0
-	sqor = 3
+	sqor = 2
 	sepI = 1
 	attm = 0
 	modCost = 0
@@ -2870,10 +2870,10 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 2
 	dstg = 2
 	sidx = 1
-	sqor = 3
+	sqor = 2
 	sepI = 1
 	attm = 0
 	modCost = 0
@@ -3150,10 +3150,10 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 2
 	dstg = 2
 	sidx = 2
-	sqor = 3
+	sqor = 2
 	sepI = 1
 	attm = 0
 	modCost = 0
@@ -3430,10 +3430,10 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 2
 	dstg = 2
 	sidx = 3
-	sqor = 3
+	sqor = 2
 	sepI = 1
 	attm = 0
 	modCost = 0
@@ -3710,10 +3710,10 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 2
 	dstg = 2
 	sidx = 4
-	sqor = 3
+	sqor = 2
 	sepI = 1
 	attm = 0
 	modCost = 0
@@ -3990,11 +3990,11 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 2
 	dstg = 3
 	sidx = 5
-	sqor = 3
-	sepI = 3
+	sqor = 2
+	sepI = 2
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -4154,7 +4154,7 @@ PART
 	dstg = 4
 	sidx = -1
 	sqor = -1
-	sepI = 3
+	sepI = 2
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -4501,7 +4501,7 @@ PART
 	dstg = 4
 	sidx = 3
 	sqor = 6
-	sepI = 3
+	sepI = 2
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -4789,7 +4789,7 @@ PART
 	dstg = 4
 	sidx = 4
 	sqor = 6
-	sepI = 3
+	sepI = 2
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -4806,7 +4806,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -5069,7 +5069,7 @@ PART
 	dstg = 4
 	sidx = 5
 	sqor = 6
-	sepI = 3
+	sepI = 2
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -5086,7 +5086,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -5349,7 +5349,7 @@ PART
 	dstg = 4
 	sidx = 6
 	sqor = 6
-	sepI = 3
+	sepI = 2
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -5366,7 +5366,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -5629,7 +5629,7 @@ PART
 	dstg = 4
 	sidx = 7
 	sqor = 6
-	sepI = 3
+	sepI = 2
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -5646,7 +5646,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -5909,7 +5909,7 @@ PART
 	dstg = 5
 	sidx = 0
 	sqor = 4
-	sepI = 4
+	sepI = 3
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -6258,7 +6258,7 @@ PART
 	dstg = 6
 	sidx = 0
 	sqor = 6
-	sepI = 4
+	sepI = 3
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -6533,10 +6533,10 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4293372396
 	partName = Part
-	pos = -2.798898,1.286852,-0.4344645
+	pos = -2.798898,1.286852,-0.4344647
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = 0,1,2.842171E-14,-8.402567E-19
+	rot = 0,1,4.263256E-14,-8.131516E-19
 	attRot = 0,0.9999999,0,0
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
@@ -6545,7 +6545,7 @@ PART
 	dstg = 6
 	sidx = 1
 	sqor = 6
-	sepI = 4
+	sepI = 3
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -6565,7 +6565,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -6816,10 +6816,10 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4293372286
 	partName = Part
-	pos = -2.798899,1.286852,0.4378087
+	pos = -2.798899,1.286852,0.4378088
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = 0,1,2.842171E-14,-8.402567E-19
+	rot = 0,1,4.263256E-14,-8.131516E-19
 	attRot = 0,0.9999999,0,0
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
@@ -6828,7 +6828,7 @@ PART
 	dstg = 6
 	sidx = 2
 	sqor = 6
-	sepI = 4
+	sepI = 3
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -6848,7 +6848,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -7111,7 +7111,7 @@ PART
 	dstg = 6
 	sidx = 0
 	sqor = 5
-	sepI = 5
+	sepI = 4
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -7287,7 +7287,7 @@ PART
 	dstg = 5
 	sidx = 0
 	sqor = 4
-	sepI = 4
+	sepI = 3
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -7624,7 +7624,7 @@ PART
 {
 	part = rn.r7.bvgd.engine_4293371990
 	partName = Part
-	pos = -5.102168E-05,1.978563,1.155907
+	pos = -5.102169E-05,1.978563,1.155907
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = -3.410605E-13,8.673617E-19,3.410605E-13,1
@@ -7636,7 +7636,7 @@ PART
 	dstg = 6
 	sidx = 0
 	sqor = 6
-	sepI = 4
+	sepI = 3
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -7911,7 +7911,7 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4293371830
 	partName = Part
-	pos = -0.434743,1.286852,2.799079
+	pos = -0.4347432,1.286852,2.799079
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = 2.273737E-13,0.7071069,-1.136868E-13,-0.7071069
@@ -7923,7 +7923,7 @@ PART
 	dstg = 6
 	sidx = 1
 	sqor = 6
-	sepI = 4
+	sepI = 3
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -7943,7 +7943,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -8194,7 +8194,7 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4293371720
 	partName = Part
-	pos = 0.4375313,1.286852,2.799082
+	pos = 0.4375314,1.286852,2.799083
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = 2.273737E-13,0.7071069,-1.136868E-13,-0.7071069
@@ -8206,7 +8206,7 @@ PART
 	dstg = 6
 	sidx = 2
 	sqor = 6
-	sepI = 4
+	sepI = 3
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -8226,7 +8226,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -8477,7 +8477,7 @@ PART
 {
 	part = launchClamp1_4293371610
 	partName = Part
-	pos = -0.004101228,1.330954,3.948379
+	pos = -0.004101229,1.330954,3.94838
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = 0.001551378,0.9995464,-0.03007781,-4.679905E-05
@@ -8489,7 +8489,7 @@ PART
 	dstg = 6
 	sidx = 0
 	sqor = 5
-	sepI = 5
+	sepI = 4
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -8665,7 +8665,7 @@ PART
 	dstg = 5
 	sidx = 0
 	sqor = 4
-	sepI = 4
+	sepI = 3
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -9005,7 +9005,7 @@ PART
 	pos = 1.155629,1.978563,0.0002273917
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = -1.98952E-13,0.7071068,2.046363E-12,0.7071068
+	rot = -1.98952E-13,0.7071068,2.16005E-12,0.7071068
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
@@ -9014,7 +9014,7 @@ PART
 	dstg = 6
 	sidx = 0
 	sqor = 6
-	sepI = 4
+	sepI = 3
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -9289,10 +9289,10 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4293371264
 	partName = Part
-	pos = 2.798795,1.286852,0.4349183
+	pos = 2.798795,1.286852,0.4349185
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = -7.105427E-14,-4.371139E-08,0,-1
+	rot = -7.105427E-14,-4.371139E-08,2.273737E-13,-1
 	attRot = 0,0.9999999,0,0
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
@@ -9301,7 +9301,7 @@ PART
 	dstg = 6
 	sidx = 1
 	sqor = 6
-	sepI = 4
+	sepI = 3
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -9321,7 +9321,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -9572,10 +9572,10 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4293371154
 	partName = Part
-	pos = 2.798796,1.286852,-0.4373539
+	pos = 2.798796,1.286852,-0.437354
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = -7.105427E-14,-4.371139E-08,0,-1
+	rot = -7.105427E-14,-4.371139E-08,2.273737E-13,-1
 	attRot = 0,0.9999999,0,0
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
@@ -9584,7 +9584,7 @@ PART
 	dstg = 6
 	sidx = 2
 	sqor = 6
-	sepI = 4
+	sepI = 3
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -9604,7 +9604,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -9867,7 +9867,7 @@ PART
 	dstg = 6
 	sidx = 0
 	sqor = 5
-	sepI = 5
+	sepI = 4
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -10043,7 +10043,7 @@ PART
 	dstg = 5
 	sidx = 0
 	sqor = 4
-	sepI = 4
+	sepI = 3
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -10380,7 +10380,7 @@ PART
 {
 	part = rn.r7.bvgd.engine_4293370858
 	partName = Part
-	pos = -5.102168E-05,1.978563,-1.155454
+	pos = -5.102169E-05,1.978563,-1.155454
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = 1.136868E-13,1,3.410605E-13,-3.402707E-12
@@ -10392,7 +10392,7 @@ PART
 	dstg = 6
 	sidx = 0
 	sqor = 6
-	sepI = 4
+	sepI = 3
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -10667,7 +10667,7 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4293370698
 	partName = Part
-	pos = 0.4346406,1.286852,-2.798615
+	pos = 0.4346408,1.286852,-2.798615
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = -1.136868E-13,-0.7071069,-2.273737E-13,-0.7071069
@@ -10679,7 +10679,7 @@ PART
 	dstg = 6
 	sidx = 1
 	sqor = 6
-	sepI = 4
+	sepI = 3
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -10699,7 +10699,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -10950,7 +10950,7 @@ PART
 {
 	part = rn.r7.vernier.engine.v.fg_4293370588
 	partName = Part
-	pos = -0.4376332,1.286852,-2.798615
+	pos = -0.4376333,1.286852,-2.798615
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = -1.136868E-13,-0.7071069,-2.273737E-13,-0.7071069
@@ -10962,7 +10962,7 @@ PART
 	dstg = 6
 	sidx = 2
 	sqor = 6
-	sepI = 4
+	sepI = 3
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -10982,7 +10982,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
@@ -11233,7 +11233,7 @@ PART
 {
 	part = launchClamp1_4293370478
 	partName = Part
-	pos = 0.003998781,1.330954,-3.947923
+	pos = 0.003998782,1.330954,-3.947924
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = -0.03007781,-4.678971E-05,-0.00155138,-0.9995465
@@ -11245,7 +11245,7 @@ PART
 	dstg = 6
 	sidx = 0
 	sqor = 5
-	sepI = 5
+	sepI = 4
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -11421,7 +11421,7 @@ PART
 	dstg = 6
 	sidx = -1
 	sqor = -1
-	sepI = 4
+	sepI = 3
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -11520,7 +11520,7 @@ PART
 {
 	part = rn.WING.R7_4294380696
 	partName = Winglet
-	pos = -5.358354E-05,2.040382,3.194314
+	pos = -5.358355E-05,2.040382,3.194314
 	attPos = 0,0,0
 	attPos0 = -2.373741,-10.44156,1.313028E-08
 	rot = 6.82121E-13,0.7071068,1.080025E-12,0.7071068
@@ -11532,7 +11532,7 @@ PART
 	dstg = 6
 	sidx = -1
 	sqor = -1
-	sepI = 4
+	sepI = 3
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -11643,7 +11643,7 @@ PART
 	dstg = 6
 	sidx = -1
 	sqor = -1
-	sepI = 4
+	sepI = 3
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -11754,7 +11754,7 @@ PART
 	dstg = 6
 	sidx = -1
 	sqor = -1
-	sepI = 4
+	sepI = 3
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -11865,7 +11865,7 @@ PART
 	dstg = 4
 	sidx = -1
 	sqor = -1
-	sepI = 3
+	sepI = 2
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -11952,7 +11952,7 @@ PART
 	dstg = 4
 	sidx = -1
 	sqor = -1
-	sepI = 3
+	sepI = 2
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -12039,7 +12039,7 @@ PART
 	dstg = 4
 	sidx = -1
 	sqor = -1
-	sepI = 3
+	sepI = 2
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -12126,7 +12126,7 @@ PART
 	dstg = 4
 	sidx = -1
 	sqor = -1
-	sepI = 3
+	sepI = 2
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -12213,7 +12213,7 @@ PART
 	dstg = 4
 	sidx = -1
 	sqor = -1
-	sepI = 3
+	sepI = 2
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -12300,7 +12300,7 @@ PART
 	dstg = 4
 	sidx = -1
 	sqor = -1
-	sepI = 3
+	sepI = 2
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -12387,7 +12387,7 @@ PART
 	dstg = 4
 	sidx = -1
 	sqor = -1
-	sepI = 3
+	sepI = 2
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -12474,7 +12474,7 @@ PART
 	dstg = 4
 	sidx = -1
 	sqor = -1
-	sepI = 3
+	sepI = 2
 	attm = 1
 	modCost = 0
 	modMass = 0
